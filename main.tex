@@ -1,0 +1,50 @@
+% settings and adjustments
+\input{resources/settings/settings}
+\input{resources/styles/adjustments}
+
+% globals
+\author{Your Name}
+
+% create glossaries
+\makeglossaries
+\loadglsentries{references/glossary_acronyms.tex}
+\setacronymstyle{long-short}
+
+\makeindex[columns=2, title=Stichwortverzeichnis, options= -s resources/styles/indexstyle.ist, intoc]
+\indexsetup{level=\chapter*,toclevel=chapter}
+
+%----------------------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{Roman}
+
+% abstract, acknowledgement, ToC
+\include{chapter/9_misc/abstract} \clearpage
+\tableofcontents \newpage
+
+% thesis ------------------------------------------------
+\pagenumbering{arabic}
+\import{chapter/1_introduction/}{introduction.tex} \clearpage
+\import{chapter/2_literature_review/}{literature_review.tex} \clearpage
+\import{chapter/3_main_section/}{main_section.tex} \clearpage
+\import{chapter/4_conclusion/}{conclusion.tex} \clearpage
+% thesis end --------------------------------------------
+
+% Glossaries
+\pagenumbering{Alph}
+\listoffigures \clearpage
+\listoftables \clearpage
+\printindex \clearpage
+% \printglossary[title={Glossary}] \clearpage
+% \printglossary[style=dottedlocations,type=\acronymtype,title={List of abbreviations}] \clearpage
+
+% Bibliography
+\printbibliography[heading=bibintoc, title={Bibliography}]\clearpage
+
+% Appendix
+% \input{chapter/9_misc/appendix}
+
+% DoA
+\input{chapter/9_misc/decleration_of_authenticity}
+
+\end{document}
