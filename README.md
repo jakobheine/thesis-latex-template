@@ -43,9 +43,7 @@ Every time you change a file and press safe, LaTeX takes the main.tex file, inte
 \import{chapter/4_conclusion/}{conclusion.tex} \clearpage
 ```
 
-* All style configurations like i.e. qoutation style, font size, ... are stored in the **resources/** directory. They are getting imported in the beginning of the **main.tex** and already follow best practices. You should not need to do any changes there. 
-
-**❗️Changes at your own risk 😄**
+* All style configurations like i.e. qoutation style, font size, ... are stored in the **resources/** directory. They are getting imported in the beginning of the **main.tex** and already follow best practices. You should not need to do any changes there. **❗️Changes at your own risk 😄**
 
 * All references are stored in the file under **references/references.bib** You should store all your sources like journals, papers and books in this document to refer to it in your thesis. One entry stores all the meta-data information and could look like this.
 
@@ -109,12 +107,34 @@ A reference manager like **Citavi** helps you in managing your references. (duh)
 3. In the background, this press of the button auto-updates the **references.bib** file in your LaTeX document.
 4. You can use the reference in your document.
 
-To achieve this, you can use any reference manager how is capable of doing the second and third step. I prefer **Citavi**. Sold?
+To achieve this, you can use any reference manager that is capable of doing the second and third step. I prefer **Citavi**. Sold?
 
 1. Create an account on [Citavi](https://www.citavi.com/en) to store your references online and i.e. also add references when you are reading them on your phone.
 2. Downlaod Citavi on your machine. Setup a new document/project/thesis and configure it to auto-update the references.bib file in your LaTeX template.
 3. Install the [Citavi browser plug-in "Picker"](https://www1.citavi.com/sub/manual5/en/installing_the_pickers.html).
 4. (optional) Install Citavi on your phone if you want to read papers during travel.
+
+# Cheat Sheet
+
+The aim of this section is to provide you with an overview of how you can do certain things in the template. (e.g. which commands you have to use)
+
+I wish I had this overview.. 😆
+
+## 🔠 Font Style
+
+|Command|Usecase|Example Usage|Example Output|Details|
+|---|---|---|---|---|
+|`\emph{Text}`|*Write italic*|`\emph{Mermaid Man}`|*Mermaid Man*| - |
+|`\underline{Text}`|<ins>Underline text</ins>|`\underline{Barnacle Boy}`|<ins>Barnacle Boy</ins>| - |
+|`\textbf{Text}`|**Write bold**|`\textbf{Man Ray}`|**Man Ray**| - |
+|`\lstinline{Text}`|`Code One-Liner`|`\lstinline{Dirty Bubble}`|`Dirty Bubble`| - |
+|`\^{Letter}`|Circumflex (^) above text|`\^{a}`|â| - |
+|`\textsubscript{Text}`|Subscript the text|`H\textsubscript{2}O`|H<sub>2</sub>0| Nestable, you can subscript a subscript ...|
+|`\textsuperscript{Text}`|Superscript the text|`Bubbly\textsuperscript{Buddy}`|Bubbly<sup>Buddy</sup>| Nestable, you can superscript a superscript ...|
+|`\numprint{Number}`|Write number with 1k separators|`\numprint{4711}`|4,711| The template uses English number format |
+|`\underline{Text}`|<ins>Underline text</ins>|`\underline{Barnacle Boy}`|<ins>Barnacle Boy</ins>| - |
+|`\`|Escape character, if you want to use characters that are preoccupied by LaTeX, i.e. **%** |`\%`|%| - |
+
 
 # 🙌🏼 Credits
 
@@ -128,5 +148,6 @@ For the creation of this thesis LaTeX template, the [LaTeX Master template](http
 * add Cheat sheet section
 * 9_misc/figures/signature.png -> add own signature
 * add links to lines of code in template, add links wherever applicable
+* Toogle View mode multiline tip
 
 # ❓FAQ
